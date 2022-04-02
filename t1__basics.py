@@ -1,7 +1,12 @@
+import logging
 import os
 
 import telebot
 from dotenv import load_dotenv
+
+logger = telebot.logger
+telebot.logger.setLevel(logging.DEBUG)
+
 
 load_dotenv()
 TOKEN = os.getenv("TOKEN")
